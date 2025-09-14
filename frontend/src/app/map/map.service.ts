@@ -26,7 +26,8 @@ export class MapService {
   addMarker(map: L.Map, coord: Coord, options = { icon: null, popup: null }): L.Marker {
     const marker = L.marker([coord.lat, coord.lng], { ...(options.icon ? { icon: options.icon } : '') });
     if (options.popup) {
-      marker.bindPopup(options.popup.location.nativeElement);
+      // marker.bindPopup(options.popup.location.nativeElement);
+      marker.bindPopup(options.popup); // options.popup is already an HTMLElement
     }
     // add click event
     marker.on('click', () => {
