@@ -14,7 +14,6 @@ export class MapPopupComponent implements OnInit {
   constructor(
     public changeDetector: ChangeDetectorRef,
     private router: Router,
-    private propertiesService: PropertiesService
   ) {}
 
   ngOnInit() {}

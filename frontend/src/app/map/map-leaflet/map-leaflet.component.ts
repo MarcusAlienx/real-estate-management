@@ -197,14 +197,25 @@ export class MapLeafletComponent implements AfterViewInit, OnChanges {
   }
 
   private addPropertyMarker(property: Property) {
-    const popupComponent = this.containerRef.createComponent(MapPopupComponent);
+    const popupComponent = this.containerRef.createComponent(MapPopupComponent, {
+      index: undefined,
+      projectableNodes: [],
+    });
+
     popupComponent.instance.property = property;
-    popupComponent.instance.changeDetector.detectChanges();
+    popupComponent.changeDetectorRef.detectChanges();
+
+    const domElem = (popupComponent.hostView as any).rootNodes[0] as HTMLElement;
 
     const icon = this.setMarkerIcon(property.type);
 
-    const marker = this.mapService.addMarker(this.map, property.position, { icon, popup: popupComponent });
+    const marker = this.mapService.addMarker(this.map, property.position, {
+      icon,
+      popup: domElem,
+    });
     this.markers.push(marker);
+    this.containerRef.detach(this.containerRef.indexOf(popupComponent.hostView));
+
     return marker;
   }
 
