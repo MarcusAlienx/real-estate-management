@@ -39,9 +39,9 @@
                 [ios]="p.icon + '-outline'"
                 [md]="p.icon + '-sharp'"
               ></ion-icon>
-              <ion-label class="mx-2  lg:mx-3">{{ p.title || ('APP.MENU_ITEM' | translate) }}</ion-label>
+              <ion-label class="mx-2  lg:mx-3">{{ p.titleKey | translate }}</ion-label>
               <!-- badge counter for unread messages -->
-              <ion-badge class="p-1 font-light" slot="end" *ngIf="p.title === 'Enquiries' && unreadEnquiries()">
+              <ion-badge class="p-1 font-light" slot="end" *ngIf="p.titleKey === 'MENU.ENQUIRIES' && unreadEnquiries()">
                 {{ unreadEnquiries() }}
               </ion-badge>
             </ion-item>
@@ -63,7 +63,7 @@
                   [ios]="page.icon + '-outline'"
                   [md]="page.icon + '-sharp'"
                 ></ion-icon>
-                <ion-label class="mx-2 lg:mx-3">{{ page.title || "Menu Item" }}</ion-label>
+                <ion-label class="mx-2 lg:mx-3">{{ page.titleKey | translate }}</ion-label>
               </ion-item>
             </ion-menu-toggle>
           }

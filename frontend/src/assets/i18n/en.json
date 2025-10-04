@@ -4,7 +4,13 @@
     "MENU_ITEM": "Menu Item"
   },
   "MENU": {
+    "MAP": "Map",
+    "PROPERTIES": "Properties",
     "ENQUIRIES": "Enquiries",
+    "MORTGAGE_CALC": "Mortgage Calc",
+    "SETTINGS": "Settings",
+    "ABOUT": "About",
+    "ACCOUNT": "Account",
     "SIGN_OUT": "Sign Out"
   },
   "PAGES": {

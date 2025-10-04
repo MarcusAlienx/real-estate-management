@@ -7,7 +7,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { IonicStorageModule } from '@ionic/storage-angular';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader, TRANSLATE_HTTP_LOADER_CONFIG } from '@ngx-translate/http-loader';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -45,10 +45,6 @@ export function HttpLoaderFactory() {
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     StorageService,
     provideHttpClient(withInterceptorsFromDi()),
-    {
-      provide: TRANSLATE_HTTP_LOADER_CONFIG,
-      useValue: { prefix: '/assets/i18n/', suffix: '.json' }
-    },
   ],
 })
 export class AppModule {}

@@ -4,7 +4,13 @@
     "MENU_ITEM": "Elemento del Menú"
   },
   "MENU": {
+    "MAP": "Mapa",
+    "PROPERTIES": "Propiedades",
     "ENQUIRIES": "Consultas",
+    "MORTGAGE_CALC": "Calculadora de Hipoteca",
+    "SETTINGS": "Configuración",
+    "ABOUT": "Acerca de",
+    "ACCOUNT": "Cuenta",
     "SIGN_OUT": "Cerrar Sesión"
   },
   "PAGES": {

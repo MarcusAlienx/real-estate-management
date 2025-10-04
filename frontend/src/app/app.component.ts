@@ -22,7 +22,7 @@ import { TranslateService } from '@ngx-translate/core';
 register();
 
 interface NavLinks {
-  title: string;
+  titleKey: string;
   url: string;
   icon: string;
   signIn?: boolean;
@@ -37,11 +37,11 @@ interface NavLinks {
 })
 export class AppComponent implements OnInit {
   public appPages: NavLinks[] = [
-    { title: 'Map', url: '/map', icon: 'map' },
-    { title: 'Properties', url: '/properties', icon: 'home' },
-    { title: 'Enquiries', url: '/enquiries', icon: 'reader' },
-    { title: 'Mortgage Calc', url: '/mortgage-calc', icon: 'calculator' },
-    { title: 'Settings', url: '/settings', icon: 'cog' },
+    { titleKey: 'MENU.MAP', url: '/map', icon: 'map' },
+    { titleKey: 'MENU.PROPERTIES', url: '/properties', icon: 'home' },
+    { titleKey: 'MENU.ENQUIRIES', url: '/enquiries', icon: 'reader' },
+    { titleKey: 'MENU.MORTGAGE_CALC', url: '/mortgage-calc', icon: 'calculator' },
+    { titleKey: 'MENU.SETTINGS', url: '/settings', icon: 'cog' },
   ];
 
   public unreadEnquiries = toSignal(
@@ -62,16 +62,16 @@ export class AppComponent implements OnInit {
   public currentLang = signal('es');
   public appLowerPages = computed<NavLinks[]>(() => {
     const pages =  [
-      { title: 'About', url: '/about', icon: 'help-circle' },
+      { titleKey: 'MENU.ABOUT', url: '/about', icon: 'help-circle' },
     ]
     if(this.user()) {
       return [...pages,
-        { title: 'Account', url: '/user/account', icon: 'person'}
+        { titleKey: 'MENU.ACCOUNT', url: '/user/account', icon: 'person'}
       ];
     }
     return [...pages,
-      { title: 'Register', url: '/user/register', icon: 'create' },
-      { title: 'Sign In', url: '/user/signin', icon: 'log-in' },
+      { titleKey: 'FORMS.REGISTER', url: '/user/register', icon: 'create' },
+      { titleKey: 'FORMS.SIGN_IN', url: '/user/signin', icon: 'log-in' },
     ];
   });
 
