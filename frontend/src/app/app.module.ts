@@ -7,7 +7,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { IonicStorageModule } from '@ionic/storage-angular';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateHttpLoader, TRANSLATE_HTTP_LOADER_CONFIG } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -19,8 +19,8 @@ import {
   withInterceptorsFromDi,
 } from '@angular/common/http';
 
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+export function HttpLoaderFactory() {
+  return new TranslateHttpLoader();
 }
 
 @NgModule({
@@ -37,7 +37,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
+        deps: []
       }
     }),
   ],
@@ -45,6 +45,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     StorageService,
     provideHttpClient(withInterceptorsFromDi()),
+    {
+      provide: TRANSLATE_HTTP_LOADER_CONFIG,
+      useValue: { prefix: '/assets/i18n/', suffix: '.json' }
+    },
   ],
 })
 export class AppModule {}

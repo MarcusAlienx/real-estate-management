@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, isDevMode } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoadingController, Platform, ToastController } from '@ionic/angular';
@@ -66,6 +66,12 @@ export class SigninComponent implements OnInit, AfterViewInit {
   }
 
   private initializeGoogleSigninWeb(): void {
+    console.log('Google OAuth Debug:');
+    console.log('Client ID:', environment.api.googleAuthClientId);
+    console.log('Is Dev Mode:', isDevMode());
+    console.log('Current Origin:', window.location.origin);
+    console.log('Environment production:', environment.production);
+
     if (!environment.api.googleAuthClientId) { return; }
 
     google.accounts.id.initialize({

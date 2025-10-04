@@ -10,7 +10,7 @@ import { ActivitiesService } from './activities/activities.service';
 import { EnquiriesService } from './enquiries/enquiries.service';
 import { StorageService } from './shared/services/storage/storage.service';
 import { UserService } from './user/user.service';
-import { WebSocketService } from './web-scoket/web-socket.service';
+import { WebSocketService } from './web-socket/web-socket.service';
 import { Enquiry } from './shared/interface/enquiry';
 
 // Register swiper js
@@ -59,6 +59,7 @@ export class AppComponent implements OnInit {
   );
 
   public user = signal<UserDetails>(undefined);
+  public currentLang = signal('es');
   public appLowerPages = computed<NavLinks[]>(() => {
     const pages =  [
       { title: 'About', url: '/about', icon: 'help-circle' },
@@ -92,6 +93,7 @@ export class AppComponent implements OnInit {
     await this.platform.ready();
     this.translate.setDefaultLang('es');
     this.translate.use('es');
+    this.currentLang.set('es');
     await this.storage.init();
     const isDark = await this.storage.getDartTheme();
     // SET THEME
@@ -129,6 +131,12 @@ export class AppComponent implements OnInit {
       return !!this.user();
     }
     return false;
+  }
+
+  public toggleLanguage(): void {
+    const newLang = this.currentLang() === 'es' ? 'en' : 'es';
+    this.translate.use(newLang);
+    this.currentLang.set(newLang);
   }
 
   public async signOut(): Promise<void> {

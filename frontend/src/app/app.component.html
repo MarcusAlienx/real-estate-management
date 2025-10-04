@@ -1,4 +1,13 @@
 <ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-button (click)="toggleLanguage()">
+          <ion-icon name="globe-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
   <ion-split-pane contentId="main-content">
     <ion-menu class="max-w-400 border-r-[1px] border-r-gray-500" contentId="main-content" type="overlay">
       <ion-content>

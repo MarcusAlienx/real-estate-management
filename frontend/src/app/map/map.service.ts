@@ -11,7 +11,12 @@ export class MapService {
   constructor() { }
 
   addTiles(map: L.Map, isDark = false) {
-    const mapTiles = isDark ? environment.map.tiles.dark : environment.map.tiles.default;
+    let mapTiles = isDark ? environment.map.tiles.dark : environment.map.tiles.default;
+    console.log('Map tiles URL before key append:', mapTiles);
+    if (mapTiles.includes('api_key=')) {
+      mapTiles = mapTiles.replace('api_key=', 'api_key=' + environment.api.mapKey);
+    }
+    console.log('Map tiles URL after key append:', mapTiles);
     const tiles = L.tileLayer(mapTiles, {
       maxZoom: 20,
       attribution: `
