@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../environments/environment';
 import { Enquiry } from '../shared/interface/enquiry';
 import { EnquiriesService } from '../enquiries/enquiries.service';
 import { WebSocketNotification, Notification } from '../shared/interface/notification';

@@ -10,7 +10,7 @@ import { ActivitiesService } from './activities/activities.service';
 import { EnquiriesService } from './enquiries/enquiries.service';
 import { StorageService } from './shared/services/storage/storage.service';
 import { UserService } from './user/user.service';
-import { WebSocketService } from './web-soket/web-socket.service';
+import { WebSocketService } from './web-socket/web-socket.service';
 import { Enquiry } from './shared/interface/enquiry';
 
 // Register swiper js
