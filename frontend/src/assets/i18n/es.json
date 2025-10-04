@@ -1,0 +1,43 @@
+{
+  "APP": {
+    "TITLE": "MetroLand.mx",
+    "MENU_ITEM": "Elemento del Menú"
+  },
+  "MENU": {
+    "ENQUIRIES": "Consultas",
+    "SIGN_OUT": "Cerrar Sesión"
+  },
+  "PAGES": {
+    "MORTGAGE_CALC": {
+      "TITLE": "Página de Calculadora de Hipoteca",
+      "HELP_TITLE": "¿Cómo puede ayudar una calculadora de hipoteca?",
+      "HELP_TEXT": "Comprar una <strong>Propiedad Inmobiliaria</strong> es una de las compras más grandes que la mayoría de las personas harán, por lo que debe pensar cuidadosamente en cómo financiarla. Puede ajustar el precio de la propiedad, el pago inicial y los términos de la hipoteca para ver cómo cambiará su pago mensual.",
+      "ALERT": "Su pago mensual de hipoteca dependerá del precio de la propiedad, pago inicial, plazo del préstamo, impuestos sobre la propiedad, seguro e interés.",
+      "SCHEDULE_TITLE": "¿Qué es el Gráfico de Programa de Amortización?",
+      "SCHEDULE_TEXT": "mostrando la cantidad de capital y la cantidad de interés que comprenden cada pago hasta que el préstamo se pague al final de su plazo.",
+      "UNDERSTAND_TITLE": "Entendiendo un Programa de Amortización",
+      "UNDERSTAND_TEXT": "En un programa de amortización, el porcentaje de cada pago que va hacia el interés disminuye un poco con cada pago y el porcentaje que va hacia el capital aumenta."
+    }
+  },
+  "FORMS": {
+    "EMAIL": "Correo Electrónico",
+    "PASSWORD": "Contraseña",
+    "SIGN_IN": "Iniciar Sesión",
+    "REGISTER": "Registrarse",
+    "FIRST_TIME": "Primera vez aquí?",
+    "OR": "O"
+  },
+  "ERRORS": {
+    "EMAIL_INVALID": "El correo electrónico no es válido.",
+    "WRONG_CREDENTIALS": "Correo electrónico o contraseña incorrectos."
+  },
+  "SIGN_OUT": {
+    "HEADER": "¿Estás seguro?",
+    "MESSAGE": "¡Serás desconectado!!!",
+    "CANCEL": "Cancelar",
+    "CONFIRM": "Cerrar sesión"
+  },
+  "TOAST": {
+    "SIGNED_OUT": "Éxito, has cerrado sesión."
+  }
+}

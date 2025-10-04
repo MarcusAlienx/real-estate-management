@@ -6,8 +6,10 @@ export const environment = {
   production: false,
   api: {
     server: 'http://localhost:8000/',
-    mapKey: '',
-    googleAuthClientId: '',
+    // TODO: Obtain mapKey from Stadia Maps (https://stadiamaps.com/) - Sign up, create API key, and insert here
+    mapKey: '746ebb2b-f22f-48c9-b6b4-b7826f4a18eb', // Insert your Stadia Maps API key here (alternative: OpenStreetMap tiles don't require API key)
+    // TODO: Obtain googleAuthClientId from Google Cloud Console (https://console.cloud.google.com/) - Create OAuth 2.0 credentials
+    googleAuthClientId: '951713624352-2na2q3lnkgs85eatub1cojjt45lf9c28.apps.googleusercontent.com', // Insert your Google OAuth 2.0 Client ID here
     webSocketUrl: 'ws://localhost:8000/websocket',
   },
   map: {

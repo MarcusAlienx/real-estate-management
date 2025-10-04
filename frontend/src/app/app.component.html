@@ -8,7 +8,7 @@
               <img src="../assets/images/logo.png" alt="logo"  routerLink = "/" />
               <div class="logo-title">
                 <a href="https://github.com/eevan7a9/real-estate-management">
-                  Real Estate Management
+                  {{ 'APP.TITLE' | translate }}
                 </a>
               </div>
             </div>
@@ -30,7 +30,7 @@
                 [ios]="p.icon + '-outline'"
                 [md]="p.icon + '-sharp'"
               ></ion-icon>
-              <ion-label class="mx-2  lg:mx-3">{{ p.title || "Menu Item" }}</ion-label>
+              <ion-label class="mx-2  lg:mx-3">{{ p.title || ('APP.MENU_ITEM' | translate) }}</ion-label>
               <!-- badge counter for unread messages -->
               <ion-badge class="p-1 font-light" slot="end" *ngIf="p.title === 'Enquiries' && unreadEnquiries()">
                 {{ unreadEnquiries() }}
@@ -66,7 +66,7 @@
                   [ios]="'log-out' + '-outline'"
                   [md]="'log-out' + '-sharp'"
                 ></ion-icon>
-                <ion-label class="mx-2 lg:mx-3">Sign Out</ion-label>
+                <ion-label class="mx-2 lg:mx-3">{{ 'MENU.SIGN_OUT' | translate }}</ion-label>
               </ion-item>
             </ion-menu-toggle>
           }

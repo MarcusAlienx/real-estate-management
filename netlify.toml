@@ -1,0 +1,10 @@
+[build]
+  publish = "frontend/www"
+  command = "cd frontend && npm install && npm run build"
+  [build.environment]
+    CHROME_BIN = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

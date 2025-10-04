@@ -17,6 +17,7 @@ import { Enquiry } from './shared/interface/enquiry';
 import { register } from 'swiper/element/bundle';
 import { NotificationsService } from './user/notifications/notifications.service';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { TranslateService } from '@ngx-translate/core';
 
 register();
 
@@ -83,11 +84,14 @@ export class AppComponent implements OnInit {
     private enquiriesService: EnquiriesService,
     private activitiesService: ActivitiesService,
     private webSocket: WebSocketService,
-    private notificationsService: NotificationsService
+    private notificationsService: NotificationsService,
+    private translate: TranslateService
   ) { }
 
   async ngOnInit() {
     await this.platform.ready();
+    this.translate.setDefaultLang('es');
+    this.translate.use('es');
     await this.storage.init();
     const isDark = await this.storage.getDartTheme();
     // SET THEME
@@ -130,17 +134,17 @@ export class AppComponent implements OnInit {
   public async signOut(): Promise<void> {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
-      header: 'Are you sure?',
-      message: 'You will be Signed out!!!',
+      header: this.translate.instant('SIGN_OUT.HEADER'),
+      message: this.translate.instant('SIGN_OUT.MESSAGE'),
       buttons: [
         {
-          text: 'Cancel',
+          text: this.translate.instant('SIGN_OUT.CANCEL'),
           role: 'cancel',
           cssClass: 'secondary',
           handler: () => { },
         },
         {
-          text: 'Sign out',
+          text: this.translate.instant('SIGN_OUT.CONFIRM'),
           cssClass: 'danger',
           handler: async () => {
             await this.userService.signOut();
@@ -172,7 +176,7 @@ export class AppComponent implements OnInit {
 
   private async showSignedOutToast(): Promise<void> {
     const toast = await this.toastController.create({
-      message: 'Success, you have signed out.',
+      message: this.translate.instant('TOAST.SIGNED_OUT'),
       color: 'success',
       duration: 3000,
     });

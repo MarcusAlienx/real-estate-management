@@ -39,6 +39,22 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['Chrome'],
     singleRun: false,
-    restartOnFileChange: true
+    restartOnFileChange: true,
+    customLaunchers: {
+      Chrome: {
+        base: 'Chrome',
+        binary: 'C:/Program Files/Google/Chrome/Application/chrome.exe'
+      },
+      ChromeHeadless: {
+        base: 'ChromeHeadless',
+        binary: 'C:/Program Files/Google/Chrome/Application/chrome.exe',
+        flags: [
+          '--headless',
+          '--disable-gpu',
+          '--no-sandbox',
+          '--disable-dev-shm-usage'
+        ]
+      }
+    }
   });
 };
