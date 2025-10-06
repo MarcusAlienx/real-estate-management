@@ -1,10 +1,48 @@
 [build]
-  publish = "frontend/www"
-  command = "cd frontend && npm install && npm run build"
-  [build.environment]
-    CHROME_BIN = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+  publish = "frontend/dist"
+  command = "cd frontend && npm run build"
+
+[dev]
+  publish = "frontend/dist"
+  command = "cd frontend && npm start"
+  port = 4200
+
+[context.production.environment]
+  NODE_ENV = "production"
+  SECRET_KEY = "7e7f59fe9818de7db513ff7249f64312c34fe4eedc7240c3e613c0a7145a4ffbfcf7efb9bb09933ee7db74e14e104ff79e431338023ee38136e6e62b5715915c"
+  DB_CONNECT = "mongodb+srv://alien_db_user:Alienigenax9!@metroland.sxol8dl.mongodb.net"
+  PORT = "8000"
+  LOGGER = "false"
+  SALT = "12"
+  USER_ACTIVITIES_MAX = "20"
+  USER_NOTIFICATIONS_MAX = "30"
+  GOOGLE_AUTH_CLIENT_ID = "951713624352-2na2q3lnkgs85eatub1cojjt45lf9c28.apps.googleusercontent.com"
+  STADIA_MAPS_API_KEY = "746ebb2b-f22f-48c9-b6b4-b7826f4a18eb"
+
+[context.development.environment]
+  NODE_ENV = "development"
+  SECRET_KEY = "dev-4ecd40e733b79f0db8268736317af0ef8cdd854cedfc79b517ec55d16d6c19e7b1c4ffe8405fe5ae54422540cc0f01ef17b0b0bdd632cab4942495e0888acade"
+  DB_CONNECT = "mongodb://localhost:27017/metroland-dev"
+  PORT = "8000"
+  LOGGER = "true"
+  SALT = "12"
+  USER_ACTIVITIES_MAX = "20"
+  USER_NOTIFICATIONS_MAX = "30"
+  GOOGLE_AUTH_CLIENT_ID = "951713624352-2na2q3lnkgs85eatub1cojjt45lf9c28.apps.googleusercontent.com"
+  STADIA_MAPS_API_KEY = "746ebb2b-f22f-48c9-b6b4-b7826f4a18eb"
+
+[build.environment]
+  NODE_ENV = "production"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/api/*"
+  to = "https://your-backend-url.com/:splat"
   status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
