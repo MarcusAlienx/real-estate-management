@@ -12,7 +12,7 @@ const notificationSchema = new mongoose.Schema(
     },
     read: { type: Boolean, default: false },
     expiresAt: { type: Date, required: true },
-    createdAt: { type: Date, required: true },
+    createdAt: { type: Date, default: Date.now },
   },
   { _id: false }
 );

@@ -12,7 +12,10 @@ const propertySchema = new mongoose.Schema(
       enum: ["sale", "rent"],
       required: true,
     },
-    position: { lat: Number, lng: Number },
+    position: {
+      lat: { type: Number, required: true, min: -90, max: 90 },
+      lng: { type: Number, required: true, min: -180, max: 180 }
+    },
     price: { type: Number },
     paymentFrequency: {
       type: String,
@@ -25,7 +28,7 @@ const propertySchema = new mongoose.Schema(
     currency: { type: String },
     contactNumber: { type: String },
     contactEmail: { type: String },
-    user_id: { type: String },
+    user_id: { type: String, required: true },
   },
   {
     timestamps: true,

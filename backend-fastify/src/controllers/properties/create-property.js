@@ -49,6 +49,6 @@ export const createProperty = async function (req, res) {
     await newProperty.save();
     return res.status(201).send({ data: newProperty });
   } catch (error) {
-    return res.send(error);
+    return res.status(500).send({ message: "Error: Something went wrong." });
   }
 };

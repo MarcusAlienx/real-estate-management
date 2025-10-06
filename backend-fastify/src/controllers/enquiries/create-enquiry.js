@@ -62,6 +62,6 @@ export const createEnquiry = async function (req, res) {
     res.status(201).send({ data: newEnquiry });
     return;
   } catch (error) {
-    return res.status(400).send(error);
+    return res.status(500).send({ message: "Error: Something went wrong." });
   }
 };

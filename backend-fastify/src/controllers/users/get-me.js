@@ -7,6 +7,6 @@ export const getMe = async function (req, res) {
         const user = await User.findOne({ user_id });
         return res.send({ data: user });
     } catch (error) {
-        return res.send(error);
+        return res.status(500).send({ message: "Error: Something went wrong." });
     }
 };

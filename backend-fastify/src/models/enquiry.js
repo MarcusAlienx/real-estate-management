@@ -26,7 +26,7 @@ const enquirySchema = new mongoose.Schema(
   {
     enquiry_id: { type: String, required: true },
     content: { type: String, minlength: 10, maxlength: 1000 },
-    email: { type: String, required: true },
+    email: { type: String, required: true, match: /.+\@.+\..+/ },
     title: { type: String, required: true },
     topic: { type: String, required: true },
     read: { type: Boolean, default: false },
