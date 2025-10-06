@@ -13,7 +13,14 @@ import { setFastifyRoutes } from "./routes/index.js";
 import { setFastifyStatic } from "./static.js";
 import { setFastifyWebsocket } from "./websocket/index.js";
 
-dotenv.config();
+// Load environment variables based on NODE_ENV
+const envFile = process.env.NODE_ENV === 'production' ? '.env.production' : '.env.development';
+dotenv.config({ path: envFile });
+
+// Fallback to .env if environment-specific file doesn't exist
+if (!process.env.SECRET_KEY) {
+  dotenv.config({ path: '.env' });
+}
 
 /**
  * The Fastify instance.
