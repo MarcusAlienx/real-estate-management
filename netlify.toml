@@ -3,9 +3,12 @@
   command = "cd frontend && npm run build"
 
 [dev]
+  # For development, run frontend only - backend runs separately
   publish = "frontend/dist"
   command = "cd frontend && npm start"
   port = 4200
+  # Uncomment below to run backend concurrently (requires additional setup)
+  # command = "concurrently \"cd backend-fastify && npm run dev\" \"cd frontend && npm start\""
 
 [context.production.environment]
   NODE_ENV = "production"
