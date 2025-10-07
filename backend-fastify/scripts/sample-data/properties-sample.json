@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Elegant Victorian Mansion",
+    "address": "742 Evergreen Terrace, Springfield",
+    "price": 950000,
+    "type": "house",
+    "transactionType": "sale",
+    "latitude": 40.7128,
+    "longitude": -74.0060,
+    "description": "Stunning Victorian mansion with original architectural details, updated modern amenities, and a beautiful garden. Perfect for entertaining and family living.",
+    "features": ["5 bedrooms", "4 bathrooms", "3500 sq ft", "Original hardwood floors", "Updated kitchen", "Garden"],
+    "images": [
+      "https://example.com/victorian1.jpg",
+      "https://example.com/victorian2.jpg",
+      "https://example.com/victorian3.jpg"
+    ],
+    "contactNumber": "+1555123456",
+    "contactEmail": "victorian@mansion.com",
+    "currency": "USD"
+  },
+  {
+    "name": "Modern Loft Apartment",
+    "address": "123 Urban Street, Downtown",
+    "price": 650000,
+    "type": "apartment",
+    "transactionType": "sale",
+    "latitude": 40.7589,
+    "longitude": -73.9851,
+    "description": "Sleek modern loft in the heart of downtown. Floor-to-ceiling windows, exposed brick, and high-end finishes throughout.",
+    "features": ["2 bedrooms", "2 bathrooms", "1500 sq ft", "Floor-to-ceiling windows", "Exposed brick", "Modern appliances"],
+    "images": [
+      "https://example.com/loft1.jpg",
+      "https://example.com/loft2.jpg"
+    ],
+    "contactNumber": "+1555123457",
+    "contactEmail": "loft@urbanliving.com",
+    "currency": "USD"
+  },
+  {
+    "name": "Commercial Retail Space",
+    "address": "456 Shopping Plaza, Mall District",
+    "price": 2500000,
+    "type": "commercial",
+    "transactionType": "sale",
+    "latitude": 40.7505,
+    "longitude": -73.9934,
+    "description": "Prime retail location in busy shopping district. High foot traffic, excellent visibility, and flexible lease terms available.",
+    "features": ["5000 sq ft", "High foot traffic", "Excellent visibility", "Flexible lease terms"],
+    "images": [
+      "https://example.com/retail1.jpg",
+      "https://example.com/retail2.jpg",
+      "https://example.com/retail3.jpg"
+    ],
+    "contactNumber": "+1555123458",
+    "contactEmail": "leasing@retailspace.com",
+    "currency": "USD"
+  }
+]

@@ -1,0 +1,6 @@
+Title,Address,Price,Type,Bedrooms,Bathrooms,Area,Description,Latitude,Longitude,Images,Phone,Email
+Beautiful Modern House,123 Main Street,450000,house,4,3,2500,A stunning modern home with open floor plan and premium finishes,40.7128,-74.0060,https://example.com/image1.jpg;https://example.com/image2.jpg,+1234567890,contact@realestate.com
+Luxury Downtown Apartment,456 Oak Avenue,750000,apartment,2,2,1200,Downtown living at its finest with city views and amenities,40.7589,-73.9851,https://example.com/apt1.jpg;https://example.com/apt2.jpg,+1234567891,info@luxuryapartments.com
+Spacious Family Home,789 Pine Road,320000,house,3,2,1800,Perfect family home in quiet neighborhood with large backyard,40.6782,-73.9442,https://example.com/family1.jpg;https://example.com/family2.jpg,+1234567892,familyhomes@email.com
+Commercial Office Space,321 Business Blvd,1200000,commercial,0,0,5000,Prime commercial space in business district with parking,40.7505,-73.9934,https://example.com/office1.jpg;https://example.com/office2.jpg,+1234567893,commercial@business.com
+Charming Townhouse,654 Elm Street,285000,townhouse,3,2.5,1600,Historic townhouse with modern updates and garden,40.7282,-74.0078,https://example.com/townhouse1.jpg;https://example.com/townhouse2.jpg,+1234567894,charminghomes@email.com
