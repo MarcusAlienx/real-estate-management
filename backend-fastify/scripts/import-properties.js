@@ -182,7 +182,7 @@ class PropertyImporter {
         lng: parseFloat(meta._property_longitude) || 0
       },
       price: parseFloat(meta._property_price) || 0,
-      currency: 'USD',
+      currency: 'MXN',
       features: this.extractFeatures(meta),
       profileImage: meta._property_images ? meta._property_images[0] : '',
       images: meta._property_images || [],
@@ -227,7 +227,7 @@ class PropertyImporter {
         lng: parseFloat(prop.longitude || prop.lng) || 0
       },
       price: parseFloat(prop.price) || 0,
-      currency: prop.currency || 'USD',
+      currency: prop.currency || 'MXN',
       features: prop.features || [],
       profileImage: prop.profileImage || prop.mainImage || '',
       images: prop.images || [],

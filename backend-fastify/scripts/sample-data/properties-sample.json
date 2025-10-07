@@ -1,58 +1,114 @@
 [
   {
-    "name": "Elegant Victorian Mansion",
-    "address": "742 Evergreen Terrace, Springfield",
-    "price": 950000,
+    "name": "Casa Colonial en Tlaquepaque",
+    "address": "Calle Independencia 742, Tlaquepaque, Jalisco",
+    "price": 8500000,
     "type": "house",
     "transactionType": "sale",
-    "latitude": 40.7128,
-    "longitude": -74.0060,
-    "description": "Stunning Victorian mansion with original architectural details, updated modern amenities, and a beautiful garden. Perfect for entertaining and family living.",
-    "features": ["5 bedrooms", "4 bathrooms", "3500 sq ft", "Original hardwood floors", "Updated kitchen", "Garden"],
+    "latitude": 20.6408,
+    "longitude": -103.3133,
+    "description": "Hermosa casa colonial con detalles arquitectónicos originales, amenidades modernas actualizadas y un hermoso jardín. Perfecta para entretenimiento y vida familiar.",
+    "features": ["5 habitaciones", "4 baños", "350 m²", "Pisos de madera originales", "Cocina actualizada", "Jardín"],
     "images": [
-      "https://example.com/victorian1.jpg",
-      "https://example.com/victorian2.jpg",
-      "https://example.com/victorian3.jpg"
+      "https://example.com/colonial1.jpg",
+      "https://example.com/colonial2.jpg",
+      "https://example.com/colonial3.jpg"
     ],
-    "contactNumber": "+1555123456",
-    "contactEmail": "victorian@mansion.com",
-    "currency": "USD"
+    "contactNumber": "+52331234567",
+    "contactEmail": "colonial@casasjalisco.com",
+    "currency": "MXN"
   },
   {
-    "name": "Modern Loft Apartment",
-    "address": "123 Urban Street, Downtown",
-    "price": 650000,
+    "name": "Loft Moderno en Lafayette",
+    "address": "Av. Lafayette 123, Lafayette, Guadalajara",
+    "price": 6500000,
     "type": "apartment",
     "transactionType": "sale",
-    "latitude": 40.7589,
-    "longitude": -73.9851,
-    "description": "Sleek modern loft in the heart of downtown. Floor-to-ceiling windows, exposed brick, and high-end finishes throughout.",
-    "features": ["2 bedrooms", "2 bathrooms", "1500 sq ft", "Floor-to-ceiling windows", "Exposed brick", "Modern appliances"],
+    "latitude": 20.6597,
+    "longitude": -103.3496,
+    "description": "Loft moderno elegante en el corazón de Lafayette. Ventanas del piso al techo, ladrillo expuesto y acabados de alta gama en todo el espacio.",
+    "features": ["2 habitaciones", "2 baños", "150 m²", "Ventanas del piso al techo", "Ladrillo expuesto", "Electrodomésticos modernos"],
     "images": [
       "https://example.com/loft1.jpg",
       "https://example.com/loft2.jpg"
     ],
-    "contactNumber": "+1555123457",
-    "contactEmail": "loft@urbanliving.com",
-    "currency": "USD"
+    "contactNumber": "+52331234568",
+    "contactEmail": "loft@lafayette.mx",
+    "currency": "MXN"
   },
   {
-    "name": "Commercial Retail Space",
-    "address": "456 Shopping Plaza, Mall District",
-    "price": 2500000,
+    "name": "Local Comercial en Zona Rosa",
+    "address": "Av. Vallarta 456, Zona Rosa, Guadalajara",
+    "price": 12000000,
     "type": "commercial",
     "transactionType": "sale",
-    "latitude": 40.7505,
-    "longitude": -73.9934,
-    "description": "Prime retail location in busy shopping district. High foot traffic, excellent visibility, and flexible lease terms available.",
-    "features": ["5000 sq ft", "High foot traffic", "Excellent visibility", "Flexible lease terms"],
+    "latitude": 20.6736,
+    "longitude": -103.3438,
+    "description": "Ubicación comercial premium en zona rosa con alto tráfico peatonal, excelente visibilidad y términos de arrendamiento flexibles disponibles.",
+    "features": ["300 m²", "Alto tráfico peatonal", "Excelente visibilidad", "Términos de arrendamiento flexibles"],
     "images": [
-      "https://example.com/retail1.jpg",
-      "https://example.com/retail2.jpg",
-      "https://example.com/retail3.jpg"
+      "https://example.com/comercial1.jpg",
+      "https://example.com/comercial2.jpg",
+      "https://example.com/comercial3.jpg"
     ],
-    "contactNumber": "+1555123458",
-    "contactEmail": "leasing@retailspace.com",
-    "currency": "USD"
+    "contactNumber": "+52331234569",
+    "contactEmail": "arrendamiento@zonarosa.mx",
+    "currency": "MXN"
+  },
+  {
+    "name": "Casa Familiar en Providencia",
+    "address": "Calle Providencia 789, Providencia, Guadalajara",
+    "price": 5200000,
+    "type": "house",
+    "transactionType": "sale",
+    "latitude": 20.6778,
+    "longitude": -103.3472,
+    "description": "Casa familiar perfecta en barrio tranquilo con amplio jardín trasero, cerca de escuelas y amenidades.",
+    "features": ["4 habitaciones", "3 baños", "280 m²", "Jardín amplio", "Cerca de escuelas", "Cochera para 2 autos"],
+    "images": [
+      "https://example.com/familiar1.jpg",
+      "https://example.com/familiar2.jpg",
+      "https://example.com/familiar3.jpg"
+    ],
+    "contactNumber": "+52331234570",
+    "contactEmail": "familia@providencia.mx",
+    "currency": "MXN"
+  },
+  {
+    "name": "Penthouse en Puerta de Hierro",
+    "address": "Blvd. Puerta de Hierro 555, Puerta de Hierro, Zapopan",
+    "price": 18500000,
+    "type": "apartment",
+    "transactionType": "sale",
+    "latitude": 20.6528,
+    "longitude": -103.3667,
+    "description": "Penthouse de lujo con terraza privada, vistas panorámicas y amenidades exclusivas en una de las zonas más prestigiosas de Guadalajara.",
+    "features": ["3 habitaciones", "3 baños", "250 m²", "Terraza privada", "Vistas panorámicas", "Gimnasio privado"],
+    "images": [
+      "https://example.com/penthouse1.jpg",
+      "https://example.com/penthouse2.jpg",
+      "https://example.com/penthouse3.jpg"
+    ],
+    "contactNumber": "+52331234571",
+    "contactEmail": "penthouse@puertadehierro.mx",
+    "currency": "MXN"
+  },
+  {
+    "name": "Terreno en Tlajomulco",
+    "address": "Camino Real 123, Tlajomulco, Jalisco",
+    "price": 3500000,
+    "type": "land",
+    "transactionType": "sale",
+    "latitude": 20.4833,
+    "longitude": -103.2833,
+    "description": "Terreno amplio ideal para desarrollo residencial en zona de crecimiento. Servicios disponibles, acceso pavimentado.",
+    "features": ["1000 m²", "Servicios disponibles", "Acceso pavimentado", "Zona de crecimiento"],
+    "images": [
+      "https://example.com/terreno1.jpg",
+      "https://example.com/terreno2.jpg"
+    ],
+    "contactNumber": "+52331234572",
+    "contactEmail": "terrenos@tlajomulco.mx",
+    "currency": "MXN"
   }
 ]

@@ -32,7 +32,7 @@ export class MapLeafletComponent implements AfterViewInit, OnChanges {
     [PropertyType.industrial]: null,
     [PropertyType.land]: null
   };
-  private center = { lat: 8.947416086535465, lng: 125.5451552207221 };
+  private center = { lat: 20.6597, lng: -103.3496 }; // Guadalajara, Jalisco, Mexico
   private markers: L.Marker[] = [];
   private pendingMarker = [];
 

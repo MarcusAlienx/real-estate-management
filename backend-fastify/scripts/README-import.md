@@ -1,6 +1,6 @@
-# 🚀 Property Import Tool
+# 🚀 Property Import Tool - México
 
-Herramienta completa para importar propiedades desde diferentes CMS y formatos de datos.
+Herramienta completa para importar propiedades desde diferentes CMS y formatos de datos, especializada en el mercado inmobiliario mexicano.
 
 ## 📋 Características
 
@@ -9,6 +9,23 @@ Herramienta completa para importar propiedades desde diferentes CMS y formatos d
 - ✅ **Validación**: Verificación de datos requeridos
 - ✅ **Usuario admin**: Creación automática de usuario administrador
 - ✅ **Logging detallado**: Seguimiento del proceso de importación
+
+## 🌍 Ciudades Principales de México
+
+La herramienta está optimizada para las principales ciudades mexicanas:
+
+### Área Metropolitana de Guadalajara:
+- **Guadalajara** (Centro): Precios desde $3M MXN
+- **Zapopan**: Precios desde $4M MXN
+- **Tlaquepaque**: Precios desde $3.5M MXN
+- **Tonala**: Precios desde $2.5M MXN
+- **Tlajomulco**: Precios desde $2M MXN
+
+### Otras Ciudades Importantes:
+- **Monterrey**: Precios desde $5M MXN
+- **Puebla**: Precios desde $2.5M MXN
+- **Mérida**: Precios desde $3M MXN
+- **Querétaro**: Precios desde $3.5M MXN
 
 ## 🚀 Uso Rápido
 
@@ -32,8 +49,8 @@ npm run import:properties wordpress ./data/wp-export.json
 
 ### CSV Format
 ```csv
-Title,Address,Price,Type,Bedrooms,Bathrooms,Area,Description,Latitude,Longitude,Images,Phone,Email
-Beautiful Modern House,123 Main Street,450000,house,4,3,2500,Description here,40.7128,-74.0060,image1.jpg;image2.jpg,+1234567890,contact@email.com
+Título,Dirección,Precio,Tipo,Habitaciones,Baños,Área,Descripción,Latitud,Longitud,Imágenes,Teléfono,Email
+Casa Moderna en Lafayette,Av. Lafayette 123,4500000,house,4,3,250,Casa moderna con acabados premium,20.6597,-103.3496,casa1.jpg;casa2.jpg,+52331234567,contacto@inmobiliaria.com
 ```
 
 ### JSON Format
