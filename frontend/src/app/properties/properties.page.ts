@@ -45,27 +45,23 @@ export class PropertiesPage implements OnInit {
   public filters = [
     {
       value: PropertyType.residential,
-      label: 'Residential type',
-    },
-    {
-      value: PropertyType.commercial,
-      label: 'Commercial type',
-    },
-    {
-      value: PropertyType.industrial,
-      label: 'Industrial type',
+      label: 'Residencial',
     },
     {
       value: PropertyType.land,
-      label: 'Land type',
+      label: 'Terrenos',
+    },
+    {
+      value: PropertyType.warehouse,
+      label: 'Bodegas',
     },
     {
       value: TransactionType.forSale,
-      label: 'For Sale',
+      label: 'En Venta',
     },
     {
       value: TransactionType.forRent,
-      label: 'For Rent',
+      label: 'En Renta',
     },
   ];
   public sorts = [

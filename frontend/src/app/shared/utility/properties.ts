@@ -21,8 +21,7 @@ export function filterProperties(
   const sale = filter.includes(TransactionType.forSale);
   const rent = filter.includes(TransactionType.forRent);
   const propertyType =
-    filter.includes(PropertyType.commercial) ||
-    filter.includes(PropertyType.industrial) ||
+    filter.includes(PropertyType.warehouse) ||
     filter.includes(PropertyType.land) ||
     filter.includes(PropertyType.residential);
 

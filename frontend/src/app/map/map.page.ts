@@ -14,9 +14,8 @@ export class MapPage {
   public properties = toSignal<Property[]>(this.propertiesService.properties$);
   public visibleType = signal<string[]>([
     PropertyType.residential.toString(),
-    PropertyType.commercial.toString(),
-    PropertyType.industrial.toString(),
     PropertyType.land.toString(),
+    PropertyType.warehouse.toString(),
   ]);
 
   constructor(private propertiesService: PropertiesService) {}

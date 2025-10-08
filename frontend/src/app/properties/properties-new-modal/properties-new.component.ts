@@ -18,28 +18,25 @@ export class PropertiesNewComponent implements OnInit {
   public propertyForm: UntypedFormGroup;
   public propertyTypes = [
     {
-      label: 'residential',
+      label: 'Residencial',
       value: PropertyType.residential
     },
     {
-      label: 'commercial',
-      value: PropertyType.commercial
+      label: 'Terrenos',
+      value: PropertyType.land
     },
     {
-      label: 'industrial',
-      value: PropertyType.industrial
-    }, {
-      label: 'land',
-      value: PropertyType.land
+      label: 'Bodegas',
+      value: PropertyType.warehouse
     }
   ];
   public transactionType = [
     {
-      label: 'For Sale',
+      label: 'En Venta',
       value: TransactionType.forSale
     },
     {
-      label: 'For Rent',
+      label: 'En Renta',
       value: TransactionType.forRent
     }
   ];

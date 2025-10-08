@@ -1,8 +1,7 @@
 export enum PropertyType {
   residential = 'residential',
-  commercial = 'commercial',
-  industrial = 'industrial',
   land = 'land',
+  warehouse = 'warehouse',
 }
 
 export enum TransactionType {

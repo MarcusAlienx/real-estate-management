@@ -28,9 +28,8 @@ export class MapLeafletComponent implements AfterViewInit, OnChanges {
   private map: L.Map;
   private mapGroupMarkers = {
     [PropertyType.residential]: null,
-    [PropertyType.commercial]: null,
-    [PropertyType.industrial]: null,
-    [PropertyType.land]: null
+    [PropertyType.land]: null,
+    [PropertyType.warehouse]: null
   };
   private center = { lat: 20.6597, lng: -103.3496 }; // Guadalajara, Jalisco, Mexico
   private markers: L.Marker[] = [];
@@ -68,21 +67,17 @@ export class MapLeafletComponent implements AfterViewInit, OnChanges {
     if (this.map) {
       // remove all
       this.map.removeLayer(this.mapGroupMarkers.residential);
-      this.map.removeLayer(this.mapGroupMarkers.commercial);
-      this.map.removeLayer(this.mapGroupMarkers.industrial);
       this.map.removeLayer(this.mapGroupMarkers.land);
+      this.map.removeLayer(this.mapGroupMarkers.warehouse);
       // add included
       if (this.visibleMarkerType().includes(PropertyType.residential)) {
         this.map.addLayer(this.mapGroupMarkers.residential);
       }
-      if (this.visibleMarkerType().includes(PropertyType.commercial)) {
-        this.map.addLayer(this.mapGroupMarkers.commercial);
-      }
-      if (this.visibleMarkerType().includes(PropertyType.industrial)) {
-        this.map.addLayer(this.mapGroupMarkers.industrial);
-      }
       if (this.visibleMarkerType().includes(PropertyType.land)) {
         this.map.addLayer(this.mapGroupMarkers.land);
+      }
+      if (this.visibleMarkerType().includes(PropertyType.warehouse)) {
+        this.map.addLayer(this.mapGroupMarkers.warehouse);
       }
     }
   }
@@ -161,31 +156,26 @@ export class MapLeafletComponent implements AfterViewInit, OnChanges {
       residential = group.residential.map((property: Property) => property.position
         ? this.addPropertyMarker(property) : undefined).filter(property => property !== undefined);
     }
-    if (group.commercial && group.commercial.length) {
-      commercial = group.commercial.map((property: Property) => property.position
-        ? this.addPropertyMarker(property) : undefined).filter(property => property !== undefined);
-    }
-    if (group.industrial && group.industrial.length) {
-      industrial = group.industrial.map((property: Property) => property.position
-        ? this.addPropertyMarker(property) : undefined).filter(property => property !== undefined);
-    }
     if (group.land && group.land.length) {
       land = group.land.map((property: Property) => property.position
         ? this.addPropertyMarker(property) : undefined).filter(property => property !== undefined);
     }
+    if (group.warehouse && group.warehouse.length) {
+      const warehouse = group.warehouse.map((property: Property) => property.position
+        ? this.addPropertyMarker(property) : undefined).filter(property => property !== undefined);
+      this.mapGroupMarkers.warehouse = L.layerGroup(warehouse);
+    }
     this.mapGroupMarkers = {
       residential: L.layerGroup(residential),
-      commercial: L.layerGroup(commercial),
-      industrial: L.layerGroup(industrial),
-      land: L.layerGroup(land)
+      land: L.layerGroup(land),
+      warehouse: this.mapGroupMarkers.warehouse || L.layerGroup([])
     };
     const ctrl = L.control.layers(this.mapGroupMarkers);
     ctrl.addTo(this.map);
     ctrl.remove();
     this.map.addLayer(this.mapGroupMarkers.residential);
-    this.map.addLayer(this.mapGroupMarkers.commercial);
-    this.map.addLayer(this.mapGroupMarkers.industrial);
     this.map.addLayer(this.mapGroupMarkers.land);
+    this.map.addLayer(this.mapGroupMarkers.warehouse);
   }
 
 
@@ -225,14 +215,11 @@ export class MapLeafletComponent implements AfterViewInit, OnChanges {
       case PropertyType.residential:
         icon = 'marker-residential.svg';
         break;
-      case PropertyType.commercial:
-        icon = 'marker-commercial.svg';
-        break;
-      case PropertyType.industrial:
-        icon = 'marker-industrial.svg';
-        break;
       case PropertyType.land:
         icon = 'marker-land.svg';
+        break;
+      case PropertyType.warehouse:
+        icon = 'marker-warehouse.svg';
         break;
       default:
         icon = 'default-marker.svg';

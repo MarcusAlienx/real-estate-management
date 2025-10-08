@@ -18,12 +18,10 @@ export class PropertyBadgeComponent implements OnInit {
     switch (this.type) {
       case PropertyType.residential:
         return 'danger';
-      case PropertyType.commercial:
-        return 'tertiary';
-      case PropertyType.industrial:
-        return 'warning';
       case PropertyType.land:
         return 'success';
+      case PropertyType.warehouse:
+        return 'warning';
       default:
         break;
     }
@@ -32,13 +30,11 @@ export class PropertyBadgeComponent implements OnInit {
   typeLabel() {
     switch (this.type) {
       case PropertyType.residential:
-        return 'Residential Real Estate';
-      case PropertyType.commercial:
-        return 'Commercial Real Estate';
-      case PropertyType.industrial:
-        return 'Industrial Real Estate';
+        return 'Residencial';
       case PropertyType.land:
-        return 'Land Real Estate';
+        return 'Terrenos';
+      case PropertyType.warehouse:
+        return 'Bodegas';
       default:
         break;
     }
