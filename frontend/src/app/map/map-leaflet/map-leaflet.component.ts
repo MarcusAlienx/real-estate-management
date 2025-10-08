@@ -106,8 +106,9 @@ export class MapLeafletComponent implements AfterViewInit, OnChanges {
     }
     this.map = L.map('mapId', {
       center: [this.center.lat, this.center.lng],
-      zoom: 18,
-      minZoom: 16,
+      zoom: 12,
+      minZoom: 8,
+      maxZoom: 20,
       zoomControl: false
     });
     L.control.zoom({
@@ -219,7 +220,7 @@ export class MapLeafletComponent implements AfterViewInit, OnChanges {
         icon = 'marker-land.svg';
         break;
       case PropertyType.warehouse:
-        icon = 'marker-warehouse.svg';
+        icon = 'marker-industrial.svg';
         break;
       default:
         icon = 'default-marker.svg';

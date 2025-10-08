@@ -5,9 +5,12 @@ import { User } from "../../src/models/user.js";
 import { Property } from "../../src/models/property.js";
 import { Enquiry } from "../../src/models/enquiry.js";
 // Import JSON data
-import users from "./data/users.json" assert { type: "json" };
-import properties from "./data/properties.json" assert { type: "json" };
-import enquiries from "./data/enquiries.json" assert { type: "json" };
+import fs from "fs";
+import path from "path";
+
+const users = JSON.parse(fs.readFileSync(path.join(process.cwd(), "scripts/seeders/data/users.json"), "utf8"));
+const properties = JSON.parse(fs.readFileSync(path.join(process.cwd(), "scripts/seeders/data/properties.json"), "utf8"));
+const enquiries = JSON.parse(fs.readFileSync(path.join(process.cwd(), "scripts/seeders/data/enquiries.json"), "utf8"));
 
 dotenv.config();
 
