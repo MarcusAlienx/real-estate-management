@@ -54,13 +54,14 @@ export class SigninComponent implements OnInit, AfterViewInit {
 
     const { email, password } = this.signinForm.value;
     const result = await this.user.signIn(email, password);
-    
+
     loading.dismiss();
 
     if (result.status === 200) {
       this.showToast('Success, You are logged in');
       this.router.navigate(['/map'], { replaceUrl: true });
     } else {
+      this.authFailed = true;
       this.showToast(result.message, 'danger');
     }
   }
